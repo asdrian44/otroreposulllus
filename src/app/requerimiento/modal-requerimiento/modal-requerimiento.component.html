@@ -115,7 +115,7 @@
                         <td *matCellDef="let element" mat-cell>
                             <input [formControl]="element.get(col)" arrow-div *ngIf="i!=2;else elses">
                             <ng-template #elses>
-                                <input  *ngIf="i==2" type="number" min="1" max="{{element.get(col).value}}">
+                                <input [formControl]="element.get(col)"  *ngIf="i==2" type="number" min="1" max="{{element.get(col).value}}">
                             </ng-template>
 
 
